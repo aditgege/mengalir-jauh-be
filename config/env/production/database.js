@@ -1,5 +1,6 @@
 const parse = require('pg-connection-string').parse;
 const config = parse(process.env.SUPABASE_URL);
+console.log(config)
 module.exports = ({ env }) => ({
   connection: {
     client: 'postgres',
