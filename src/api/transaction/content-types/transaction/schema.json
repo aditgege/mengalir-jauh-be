@@ -24,12 +24,6 @@
     "datetime": {
       "type": "datetime"
     },
-    "user": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "transactions"
-    },
     "confirmed": {
       "type": "boolean",
       "default": true
@@ -37,6 +31,12 @@
     "isAccountsReceivable": {
       "type": "boolean",
       "default": false
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "transactions"
     }
   }
 }
